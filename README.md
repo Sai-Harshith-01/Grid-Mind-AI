@@ -1,239 +1,335 @@
-# ⚡ GridMind AI
-### AI-Powered Energy Intelligence & Optimisation for MSME Factories
+GridMind AI
 
-**Smarter energy decisions. More efficient manufacturing. A sustainable future.**
+AI-Powered Energy Intelligence and Optimisation for MSME Manufacturing
 
-GridMind AI is an AI-powered energy optimisation prototype designed to help micro, small, and medium-sized manufacturing enterprises (MSMEs) identify unusual electricity consumption, investigate potential energy inefficiencies, and evaluate cost-effective energy allocation strategies.
+Turning industrial energy data into actionable insights through AI-assisted investigation and mathematical optimisation.
 
-The platform combines **Google Gemini for AI-assisted investigation** with **SciPy and the HiGHS optimisation solver** to analyse energy profiles, explore renewable energy utilisation, and compare baseline electricity costs with mathematically optimised scenarios.
+GridMind AI is an energy intelligence prototype designed to help micro, small, and medium-sized manufacturing enterprises (MSMEs) understand electricity consumption, identify unusual energy usage, and evaluate cost-effective energy allocation strategies.
 
-GridMind AI aims to make energy intelligence more accessible to smaller manufacturers while supporting resource efficiency and sustainable industrial decision-making.
+The platform combines Google Gemini for AI-assisted energy investigation with SciPy and the HiGHS optimisation solver to analyse consumption patterns, evaluate renewable energy utilisation, and compare baseline electricity costs with mathematically optimised scenarios.
 
-> **Project status:** Prototype development; cloud deployment is planned.
->
-> **Data transparency:** Demonstration factories use fictional identities and synthetic data. All savings figures are modelled estimates, not verified or guaranteed real-world results.
+By bringing energy analytics, anomaly detection, generative AI, and constrained optimisation into a unified interface, GridMind AI explores a practical approach to more efficient and sustainable industrial energy management.
 
----
+«Project status: Prototype.
 
-## 🎯 Problem Statement
-
-Manufacturing facilities depend on electricity for machinery, refrigeration, lighting, ventilation, and other industrial processes. Smaller manufacturers may face difficulties identifying unusual consumption, managing time-dependent electricity costs, and evaluating how available renewable energy could meet demand.
-
-Limited visibility into energy usage can make it harder to identify potential inefficiencies and evaluate opportunities for cost reduction.
-
-### Our Solution
-
-GridMind AI combines energy analytics, anomaly detection, generative AI, and mathematical optimisation in a unified decision-support platform.
-
-**Project-specific problem statement:**
-
-> Develop an AI-powered solution to reduce electricity waste, optimise renewable energy usage, and improve energy efficiency in small and medium-sized manufacturing facilities.
-
-The project supports the broader challenge of improving resource efficiency and enabling more informed, sustainable decision-making.
+Data transparency: Factory identities and demonstration datasets are fictional and synthetic. Savings and energy allocation results are modelled estimates, not verified real-world outcomes.»
 
 ---
 
-## ✨ Key Features
+Table of Contents
 
-### 📊 Energy Intelligence Dashboard
-- Visualise synthetic factory electricity consumption and energy profiles.
-- Review factory-level energy indicators and anomaly summaries.
-- Explore renewable energy availability and cost comparisons.
-- Present optimisation results in an accessible interface.
-
-### 🚨 Electricity Anomaly Detection
-- Identify unusual consumption patterns using configured detection rules.
-- Compare consumption against defined baselines.
-- Highlight patterns that may require operational investigation.
-
-Detected anomalies indicate potential issues; they do not independently confirm equipment faults or energy waste.
-
-### 🤖 Gemini AI Energy Investigator
-- Investigate detected anomalies using available energy evidence.
-- Generate contextual explanations and possible root-cause hypotheses.
-- Suggest verification steps and potential energy-efficiency improvements.
-- Provide human-readable insights to support decision-making.
-
-Google Gemini provides contextual analysis and recommendations. Its explanations are not treated as verified measurements or mathematical optimisation results.
-
-### ⚡ Renewable Energy Optimisation
-- Formulate a constrained energy-allocation problem.
-- Use SciPy with the HiGHS solver to calculate numerical solutions.
-- Consider configured solar, wind, biomass, and grid energy sources.
-- Account for applicable generation limits, supply constraints, and cost assumptions.
-
-### 💰 Energy Cost Analysis
-- Compare baseline and optimised energy costs.
-- Calculate modelled cost differences and savings percentages.
-- Produce annualised projections based on assumed operating days.
-- Evaluate configured time-of-use tariff scenarios.
-
-### 🏭 Multiple Factory Profiles
-Explore different synthetic industrial energy scenarios through three fictional demonstration factories.
+- "Problem Statement" (#problem-statement)
+- "Solution Overview" (#solution-overview)
+- "Key Features" (#key-features)
+- "System Workflow" (#system-workflow)
+- "System Architecture" (#system-architecture)
+- "Technology Stack" (#technology-stack)
+- "Energy Optimisation Model" (#energy-optimisation-model)
+- "Demonstration Factories" (#demonstration-factories)
+- "Project Structure" (#project-structure)
+- "Getting Started" (#getting-started)
+- "Testing and Validation" (#testing-and-validation)
+- "Security and Privacy" (#security-and-privacy)
+- "Sustainability Impact" (#sustainability-impact)
+- "Limitations" (#limitations)
+- "Future Enhancements" (#future-enhancements)
+- "Team" (#team)
+- "License" (#license)
 
 ---
 
-## 🔄 How GridMind AI Works
+Problem Statement
 
-1. **Select a factory:** Choose a fictional manufacturing profile.
-2. **Analyse energy data:** Load the corresponding synthetic demand and energy-supply assumptions.
-3. **Detect anomalies:** Evaluate consumption patterns against configured rules and baselines.
-4. **Investigate findings:** Use Gemini to interpret the available evidence and propose possible explanations.
-5. **Optimise energy allocation:** Solve the configured constrained optimisation model using SciPy and HiGHS.
-6. **Compare costs:** Calculate baseline and optimised costs from the model inputs.
-7. **Review insights:** Examine AI explanations, numerical results, and estimated savings.
+Manufacturing facilities consume electricity across machinery, production lines, refrigeration, lighting, ventilation, and other industrial operations.
 
-The platform is designed for decision support. It does not autonomously dispatch electricity or control physical factory equipment.
+Smaller manufacturers may face challenges such as:
+
+- Limited visibility into energy consumption patterns.
+- Difficulty identifying unusual electricity usage.
+- Increasing electricity costs during peak-demand periods.
+- Limited tools for evaluating renewable energy utilisation.
+- Difficulty comparing alternative energy allocation strategies.
+
+Without accessible energy analytics, identifying potential inefficiencies and evaluating cost-saving opportunities can be challenging.
+
+Proposed Solution
+
+GridMind AI provides an integrated decision-support platform that:
+
+1. Analyses factory energy consumption profiles.
+2. Detects unusual usage patterns using configurable rules.
+3. Uses generative AI to investigate potential causes.
+4. Optimises energy allocation under configured constraints.
+5. Compares baseline and optimised electricity costs.
+6. Presents findings and modelled savings through a unified dashboard.
+
+Objective: Explore how AI-assisted investigation and mathematical optimisation can help MSMEs make more informed energy management decisions.
 
 ---
 
-## 🏭 Demonstration Factories
+Key Features
 
-GridMind AI includes three fictional factory profiles representing different manufacturing energy scenarios.
+1. Energy Intelligence Dashboard
 
-| Factory | Demonstration ID | Industrial scenario |
-|---|---|---|
-| PrecisionWorks Factory | `DEMO-FAC-001` | Precision engineering, CNC machining, and off-shift consumption |
-| FreshField Factory | `DEMO-FAC-002` | Food processing, cold storage, and peak demand |
-| WeaveWise Factory | `DEMO-FAC-003` | Textile spinning, weaving, and shift-based energy consumption |
+- Visualise factory-level electricity consumption and energy profiles.
+- Review energy indicators and detected anomalies.
+- Explore renewable energy availability and configured tariffs.
+- Compare baseline and optimised energy scenarios.
+- Present cost analysis and optimisation results in a unified interface.
 
-**Data disclosure:** These are fictional demonstration factories using synthetic data. They do not represent actual companies, customer facilities, or measured industrial energy consumption.
+2. Electricity Anomaly Detection
+
+Identifies potentially unusual energy consumption using configured detection rules and baselines.
+
+Capabilities include:
+
+- Consumption baseline comparison.
+- Identification of deviations from expected patterns.
+- Highlighting of unusual operating periods.
+- Generation of findings for further investigation.
+
+An anomaly is an indicator for investigation, not independent proof of energy waste or equipment failure.
+
+3. Gemini AI Energy Investigator
+
+Integrates Google Gemini to interpret energy-related findings and generate contextual explanations.
+
+The investigator can:
+
+- Analyse available energy evidence.
+- Suggest possible causes of unusual consumption.
+- Recommend practical verification steps.
+- Identify potential energy-efficiency opportunities.
+- Translate analytical findings into understandable explanations.
+
+AI-generated findings are advisory. They are not treated as verified measurements or as substitutes for numerical optimisation.
+
+4. Constrained Energy Optimisation
+
+Uses SciPy and the HiGHS solver to calculate an energy allocation that minimises modelled electricity costs.
+
+The optimisation model can represent:
+
+- Electricity demand requirements.
+- Configured energy source costs.
+- Renewable generation availability.
+- Source capacity and grid supply limits.
+- Time-dependent electricity tariffs.
+- Other constraints implemented in the model.
+
+The solver calculates a numerical solution to the configured mathematical problem; the quality of that solution depends on the accuracy and completeness of the model.
+
+5. Energy Cost Analysis
+
+- Compare baseline and optimised electricity costs.
+- Calculate modelled daily cost differences.
+- Estimate savings percentages.
+- Generate annualised projections using configured operating days.
+- Evaluate illustrative time-of-use tariff scenarios.
+
+All savings calculations are conditional on the configured assumptions and constraints.
+
+6. Multiple Factory Profiles
+
+Includes three fictional industrial scenarios to demonstrate how different manufacturing energy profiles can be analysed using the same workflow.
 
 ---
 
-## 🏗️ System Architecture
+System Workflow
 
-GridMind AI separates the user interface, backend processing, AI investigation, numerical optimisation, and cost calculations.
+GridMind AI follows a structured workflow from energy data to decision-support insights.
 
-```mermaid
+1. Factory Selection: Select a fictional manufacturing profile.
+2. Energy Data Loading: Load the associated synthetic demand and energy source assumptions.
+3. Energy Analysis: Evaluate consumption patterns and configured baselines.
+4. Anomaly Detection: Flag unusual usage using predefined rules.
+5. AI Investigation: Use Gemini to interpret the available findings and propose potential explanations.
+6. Energy Optimisation: Formulate and solve the configured constrained optimisation problem using SciPy and HiGHS.
+7. Cost Comparison: Calculate baseline and optimised costs from the model inputs.
+8. Insight Presentation: Display analytical findings, AI-generated explanations, and numerical results through the dashboard.
+
+The AI investigation and mathematical optimisation are separate processes: Gemini provides contextual interpretation, while the optimisation solver calculates the energy allocation.
+
+---
+
+System Architecture
+
+The architecture separates the user interface, backend orchestration, analytical processing, AI investigation, optimisation, and cost calculations.
+
 flowchart TD
-    A["Synthetic Factory Energy Data"] --> B["React Frontend"]
-    B --> C["FastAPI Backend"]
+    A["Synthetic Factory Energy Data"]
+    B["React + TypeScript Frontend"]
+    C["FastAPI Backend"]
 
-    C --> D["Energy Analytics"]
-    D --> E["Rule-Based Anomaly Detection"]
+    D["Energy Analytics"]
+    E["Rule-Based Anomaly Detection"]
+    F["Gemini AI Energy Investigator"]
+    G["Constrained Optimisation Model"]
+    H["SciPy + HiGHS Solver"]
+    I["Energy Allocation Results"]
+    J["Cost and Savings Calculations"]
+    K["Dashboard Insights"]
 
-    E --> F["Gemini AI Investigator"]
-    D --> G["Energy Optimisation Model"]
+    A --> C
+    B <--> C
+    C --> D
+    D --> E
+    E --> F
+    D --> G
+    G --> H
+    H --> I
+    I --> J
+    F --> K
+    J --> K
+    K --> B
 
-    G --> H["SciPy + HiGHS Solver"]
-    H --> I["Energy Allocation Results"]
+Architecture Components
 
-    I --> J["Cost and Savings Calculations"]
-    F --> K["Explanations and Recommendations"]
+Component| Responsibility
+Frontend| Factory selection, dashboard visualisation, and presentation of results
+FastAPI backend| API handling and coordination of analysis workflows
+Energy analytics| Processing of consumption profiles and energy-related indicators
+Anomaly detection| Identification of deviations using configured rules
+Gemini AI investigator| Contextual explanations and potential corrective actions
+Optimisation engine| Mathematical formulation and solver execution
+HiGHS solver| Numerical solution of supported optimisation problems
+Cost analysis| Calculation of modelled costs, differences, and savings
+Dashboard insights| Presentation of AI explanations and numerical results
 
-    J --> L["Dashboard Results"]
-    K --> L
-```
-
-### Architecture Overview
-
-- **Frontend:** Presents factory profiles, energy indicators, anomaly findings, and optimisation results.
-- **Backend:** Coordinates API requests, energy analysis, AI integration, and optimisation workflows.
-- **AI investigation:** Uses Google Gemini to interpret available evidence and generate contextual recommendations.
-- **Optimisation engine:** Uses SciPy and HiGHS to solve the configured linear programming model.
-- **Cost analysis:** Calculates modelled baseline and optimised energy costs.
-
-**Design principle:** Generative AI explains; mathematical optimisation calculates.
-
----
-
-## 🛠️ Technology Stack
-
-| Technology | Purpose |
-|---|---|
-| React | Frontend user interface |
-| TypeScript | Frontend application logic |
-| Vite | Development server and production build tooling |
-| Tailwind CSS | User interface styling |
-| Python | Backend processing |
-| FastAPI | Backend API framework |
-| Uvicorn | ASGI application server |
-| Google Gemini | AI-assisted energy investigation |
-| `google-genai` | Google GenAI SDK |
-| SciPy | Scientific computing and optimisation interface |
-| HiGHS | Linear programming solver |
-| Google Cloud Run | Planned backend hosting |
-| Firebase Hosting | Planned frontend hosting |
-
-The technology list should reflect the dependencies and configuration present in the project repository.
+Core design principle: AI explains the evidence; mathematical optimisation calculates the solution.
 
 ---
 
-## 🧮 Energy Optimisation Model
+Technology Stack
 
-GridMind AI uses mathematical optimisation to evaluate how configured energy sources can meet modelled electricity demand at a lower cost.
+Technology| Purpose
+React| Frontend interface
+TypeScript| Frontend application logic and type safety
+Vite| Frontend development and build tooling
+Tailwind CSS| Interface styling
+Python| Backend processing and analytical logic
+FastAPI| Backend API framework
+Uvicorn| ASGI application server
+Google Gemini| AI-assisted energy investigation
+"google-genai"| Google GenAI SDK
+SciPy| Scientific computing and optimisation interface
+HiGHS| Linear and mixed-integer optimisation solver, depending on the formulation
 
-A simplified representation of the objective is:
+The table describes the intended technical stack; implementation details should be consistent with the actual repository dependencies.
 
-\[
+---
+
+Energy Optimisation Model
+
+GridMind AI formulates energy allocation as a constrained cost-minimisation problem.
+
+A simplified objective function is:
+
+[
 \min \sum_{t=1}^{T}\sum_{s\in S} c_{s,t}x_{s,t}
-\]
+]
 
 Where:
 
-- \(t\) represents a time interval.
-- \(S\) represents the available energy sources.
-- \(c_{s,t}\) represents the configured unit cost of source \(s\) during interval \(t\).
-- \(x_{s,t}\) represents the energy allocated from source \(s\) during interval \(t\).
+- (T) is the number of modelled time intervals.
+- (S) is the set of available energy sources.
+- (c_{s,t}) is the configured unit cost of source (s) during interval (t).
+- (x_{s,t}) is the energy allocated from source (s) during interval (t).
 
-The implemented model may include demand-supply balance, generation availability, equipment capacities, grid limits, and other configured constraints.
+Example Constraints
 
-### Energy Sources
+Demand-supply balance
 
-- **Solar energy:** Modelled according to the configured generation profile.
-- **Wind energy:** Modelled according to the configured generation profile.
-- **Biomass energy:** Includes configured fuel costs where represented in the model.
-- **Grid electricity:** Priced using the configured tariff assumptions.
+[
+\sum_{s\in S}x_{s,t}=D_t
+]
 
-Renewable energy may have a zero marginal operating cost in the model. This does not imply that renewable infrastructure, maintenance, storage, or other associated expenses are free.
+Here, (D_t) represents electricity demand during interval (t). This equality is appropriate when the model requires all demand to be met exactly by the included sources.
 
-### Illustrative Time-of-Use Tariffs
+Source capacity
 
-| Period | Illustrative time window | Rate |
-|---|---|---:|
-| Off-peak | 10 PM–6 AM | ₹6.50/kWh |
-| Normal | 6 AM–6 PM | ₹8.20/kWh |
-| Peak | 6 PM–10 PM | ₹11.80/kWh |
+[
+0\leq x_{s,t}\leq U_{s,t}
+]
 
-These are illustrative demonstration rates, not verified tariffs from an electricity provider. Their use in the README should match the current application configuration.
+Here, (U_{s,t}) is the maximum available supply from source (s) during interval (t).
 
-### Savings Calculations
+Additional constraints may represent grid import limits, renewable availability, and other operating requirements supported by the implementation.
 
-**Estimated daily savings**
+Modelled Energy Sources
 
-\[
-S_{\text{daily}}=C_{\text{baseline}}-C_{\text{optimised}}
-\]
+- Solar: Supply constrained by the configured solar generation profile.
+- Wind: Supply constrained by the configured wind generation profile.
+- Biomass: Supply and fuel costs represented according to configured assumptions.
+- Grid electricity: Supply priced using the configured electricity tariff.
 
-**Estimated savings percentage**
+The optimiser can only evaluate the sources, constraints, and cost components explicitly represented in its model. Renewable infrastructure costs, storage losses, maintenance, and capital expenditure should not be assumed to be included unless implemented.
 
-\[
-S_{\%}=
-\frac{C_{\text{baseline}}-C_{\text{optimised}}}
-{C_{\text{baseline}}}\times100
-\]
+Illustrative Time-of-Use Tariffs
 
-**Modelled annual savings**
+Period| Example time window| Illustrative rate
+Off-peak| 10 PM–6 AM| ₹6.50/kWh
+Normal| 6 AM–6 PM| ₹8.20/kWh
+Peak| 6 PM–10 PM| ₹11.80/kWh
 
-\[
-S_{\text{annual}}=S_{\text{daily}}\times D
-\]
+These rates are illustrative values for demonstration purposes, not verified tariffs from a particular electricity provider. The values used in the README should match the application's actual configuration.
 
-Here, \(D\) represents the assumed number of operating days per year.
+Cost and Savings Calculations
 
-These calculations estimate potential savings under the model's assumptions. Actual outcomes depend on real demand, tariffs, production schedules, equipment constraints, renewable availability, and other operating costs.
+Modelled daily savings
+
+[
+S_{\mathrm{daily}}=C_{\mathrm{baseline}}-C_{\mathrm{optimised}}
+]
+
+Modelled savings percentage
+
+[
+S_{%}=
+\frac{C_{\mathrm{baseline}}-C_{\mathrm{optimised}}}
+{C_{\mathrm{baseline}}}\times100
+]
+
+Annualised savings estimate
+
+[
+S_{\mathrm{annual}}=S_{\mathrm{daily}}\times D
+]
+
+Where:
+
+- (C_{\mathrm{baseline}}) is the baseline modelled electricity cost.
+- (C_{\mathrm{optimised}}) is the optimised modelled electricity cost.
+- (D) is the assumed number of operating days per year.
+
+The savings percentage is undefined when the baseline cost is zero. The application should handle this case explicitly.
+
+These calculations estimate potential cost differences under the model's assumptions. They do not guarantee that equivalent savings will occur in a real factory.
 
 ---
 
-## 📂 Project Structure
+Demonstration Factories
 
-The project is organised around a frontend application and a backend service. The following illustrates the intended high-level structure; actual paths should match the repository.
+GridMind AI includes three fictional manufacturing profiles.
 
-```text
+Factory| Demonstration ID| Scenario
+PrecisionWorks Factory| "DEMO-FAC-001"| Precision engineering, CNC machining, and off-shift consumption
+FreshField Factory| "DEMO-FAC-002"| Food processing, cold storage, and peak demand
+WeaveWise Factory| "DEMO-FAC-003"| Textile spinning, weaving, and shift-based energy consumption
+
+Data disclosure: All factory identities and demonstration data are fictional. The profiles do not represent actual companies, customers, or measured industrial energy consumption.
+
+---
+
+Project Structure
+
+The following is an illustrative high-level structure. Actual paths and filenames should match the repository.
+
 Grid-Mind-AI/
 ├── backend/
 │   ├── app/
+│   │   ├── main.py
+│   │   ├── ...
 │   ├── tests/
 │   ├── requirements.txt
 │   └── .env.example
@@ -242,212 +338,190 @@ Grid-Mind-AI/
 │   ├── package.json
 │   └── ...
 └── README.md
-```
 
-The backend handles API requests, AI integration, anomaly analysis, and optimisation. The frontend provides the user interface and presents results.
+- "backend/" contains the API and server-side processing.
+- "frontend/" contains the user interface and dashboard.
+- "tests/" contains backend validation tests, if configured.
+- ".env.example" documents required environment variable names without exposing secrets.
 
 ---
 
-## 🚀 Getting Started
+Getting Started
 
-### Prerequisites
+Prerequisites
 
-- Python compatible with the backend dependencies.
+- Python version compatible with the backend dependencies.
 - Node.js and npm compatible with the frontend.
-- Git, if cloning the repository.
-- A Google Gemini API key for AI-investigation functionality.
+- Git.
+- A Google Gemini API key for AI investigation functionality.
 
-### Clone the Repository
+1. Clone the Repository
 
-```bash
 git clone https://github.com/Sai-Harshith-01/Grid-Mind-AI.git
 cd Grid-Mind-AI
-```
 
-### Run the Backend
+2. Set Up the Backend
 
-From the project root, enter the backend directory:
-
-```powershell
 cd backend
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 pip install -r requirements.txt
-```
 
-If the repository contains an `.env.example` file, create a local environment file:
+If the repository includes ".env.example", create a local environment file:
 
-```powershell
 Copy-Item .env.example .env
-```
 
-Configure the required environment variables using the names defined in the project. Store the Gemini API key securely on the backend.
+Configure the environment variables required by the application. Store the Gemini API key on the backend and never expose it through frontend code.
 
-If the application entry point is `app.main`, start the server with:
+If the application entry point is "app.main", run:
 
-```powershell
 uvicorn app.main:app --reload --port 8000
-```
 
-### Run the Frontend
+The entry point and required environment variables should be verified against the repository.
+
+3. Set Up the Frontend
 
 Open a second terminal:
 
-```powershell
 cd frontend
 npm install
 npm run dev
-```
 
-Open the local development URL printed by Vite. Configure the frontend API base URL according to the environment-variable names used by the application.
+Open the local development URL displayed by Vite. Configure the frontend API base URL using the environment variable names defined by the project.
 
-### API Documentation
+4. Access API Documentation
 
-If the backend uses FastAPI's default documentation settings, interactive API documentation is available at:
+If the application uses FastAPI's default documentation settings, open:
 
-`http://localhost:8000/docs`
+- Swagger UI: "http://localhost:8000/docs"
+- OpenAPI schema: "http://localhost:8000/openapi.json"
 
-The OpenAPI schema may be available at:
-
-`http://localhost:8000/openapi.json`
-
-The actual URLs depend on the application's host, port, and documentation configuration.
+These endpoints depend on the backend being available and documentation not being disabled or customised.
 
 ---
 
-## 🧪 Testing and Validation
+Testing and Validation
 
-Backend tests can be run with pytest if the repository includes the corresponding test setup:
+Testing should cover the analytical workflow, optimisation behaviour, API responses, and user interface.
 
-```bash
+Backend Tests
+
+If pytest is configured and the repository contains the relevant test directory:
+
 python -m pytest tests/ -v
-```
 
-Run the command from the backend directory.
+Run this command from the backend directory.
 
-Build the frontend for production from the frontend directory:
+Frontend Production Build Check
 
-```bash
 npm run build
-```
 
-Testing should cover anomaly detection, optimisation constraints, cost calculations, API responses, error handling, and frontend behaviour.
+Run this command from the frontend directory.
 
-Test counts and successful results should only be reported after they have been verified in the current environment.
+Recommended Validation Areas
 
----
+- Anomaly detection against known synthetic test cases.
+- Demand-supply balance and energy source capacity constraints.
+- Optimisation solver status and infeasible scenarios.
+- Baseline and optimised cost calculations.
+- Zero-baseline savings percentage handling.
+- Gemini API errors and unavailable responses.
+- API input validation and error handling.
+- Frontend presentation of missing or invalid results.
 
-## ☁️ Cloud Deployment
-
-GridMind AI is being prepared for deployment using Google Cloud services.
-
-The intended deployment architecture is:
-
-| Component | Target service | Purpose |
-|---|---|---|
-| Backend | Google Cloud Run | Host the FastAPI application |
-| Frontend | Firebase Hosting | Serve the production web application |
-| AI credentials | Server-side secret configuration | Protect the Gemini API key |
-
-The deployment process includes configuring the production backend, securely providing the Gemini API key, setting the frontend's production API URL, configuring CORS, and validating the application end to end.
-
-**Deployment status:** Planned / in progress. Public URLs will be published here after the deployed services have been verified.
-
-Cloud resource usage may incur charges depending on configuration and consumption. Review current pricing and billing requirements before deployment.
+Test counts, build status, and successful execution should only be reported after they have been verified.
 
 ---
 
-## 🔐 Security and Privacy
+Security and Privacy
 
-GridMind AI follows these security principles:
+GridMind AI follows basic security practices for AI-enabled applications.
 
 - Keep API keys and credentials on the backend.
-- Never embed private keys in frontend source code.
-- Exclude `.env` files and secrets from version control.
-- Use secure server-side configuration for deployed environments.
-- Restrict production CORS to approved frontend origins.
+- Exclude ".env" files and secrets from version control.
 - Validate incoming API requests.
-- Avoid logging sensitive credentials.
-- Review authentication, access controls, and rate limiting before production use.
+- Avoid logging credentials or other sensitive information.
+- Restrict cross-origin requests to approved origins where applicable.
+- Handle external AI service errors safely.
+- Review authentication, authorisation, and rate limiting before any production use.
 
-The current demonstration uses synthetic factory data. Integrating real industrial data would require additional privacy, security, and access-control considerations.
-
----
-
-## 🌱 Sustainability Impact
-
-GridMind AI explores how AI-assisted analysis and mathematical optimisation may support more efficient industrial energy management.
-
-### Potential Benefits
-
-**Reduced electricity waste:** Anomaly detection can highlight consumption patterns that deserve further investigation.
-
-**Improved cost awareness:** Tariff-based comparisons help users explore how energy allocation affects modelled electricity costs.
-
-**Renewable energy utilisation:** The optimiser evaluates the contribution of available renewable generation within its configured constraints.
-
-**Accessible energy intelligence:** An integrated dashboard can make energy analysis easier to explore for smaller manufacturers.
-
-**Informed sustainability decisions:** Modelled scenarios can help identify opportunities worth validating before real operational changes are considered.
-
-These benefits are intended outcomes. Real electricity reductions, financial savings, and emissions improvements must be established through real-world measurement and validation.
+The demonstration uses synthetic factory data. Integrating actual industrial meter data would require additional security controls, access management, and appropriate data governance.
 
 ---
 
-## ⚠️ Limitations
+Sustainability Impact
 
-GridMind AI is a prototype with the following limitations:
+GridMind AI explores the potential of energy analytics and constrained optimisation to support more efficient industrial operations.
 
-- Demonstration factories and energy profiles are synthetic.
-- Tariff values are illustrative and may not match actual utility rates.
-- Optimisation results depend on the implemented objective, constraints, and input assumptions.
-- Capital costs, maintenance, storage, and other expenses may not be fully represented.
-- Gemini-generated explanations can be incorrect and require verification.
-- The application does not autonomously control physical factory equipment.
-- Savings figures are modelled estimates, not guaranteed outcomes.
-- Cloud deployment remains unverified until the public application has been tested.
+Energy waste investigation: Anomaly detection can identify consumption patterns that warrant operational review.
 
-The platform is a decision-support prototype, not a certified energy audit or a substitute for professional engineering review.
+Cost visibility: Tariff-aware comparisons can help users understand how different energy allocation scenarios affect modelled costs.
+
+Renewable energy utilisation: The optimiser can evaluate available renewable generation within its configured constraints.
+
+Accessible energy intelligence: A unified dashboard can make analytical findings easier for smaller manufacturers to explore.
+
+Evidence-based decisions: Scenario comparisons can help identify potential improvements for subsequent engineering assessment.
+
+These are intended benefits. Actual energy savings, financial outcomes, and emissions reductions require validation using real operational data and appropriate measurement methods.
 
 ---
 
-## 🛣️ Future Development
+Limitations
 
-Future development may include:
+GridMind AI is a prototype and has important limitations:
 
-- Cloud deployment and production environment validation.
-- Integration with authorised factory meter data.
-- Validation against real electricity tariffs and production schedules.
-- More detailed equipment and operational constraints.
-- Historical energy analytics and trend monitoring.
-- Improved evaluation of anomaly detection and optimisation quality.
+- Factory profiles and demonstration datasets are synthetic.
+- Illustrative tariffs may not match actual electricity tariffs.
+- Optimisation outcomes depend on the mathematical formulation, inputs, and constraints.
+- Capital expenditure, maintenance, storage losses, and other costs may be excluded.
+- AI-generated explanations may be incomplete or incorrect.
+- Anomaly detection identifies patterns, not confirmed equipment faults.
+- Modelled savings are estimates rather than guaranteed outcomes.
+- Real-world industrial performance has not been established by the demonstration data.
+
+GridMind AI is intended for decision support. It is not a certified energy audit, a guarantee of cost reduction, or an autonomous industrial control system.
+
+---
+
+Future Enhancements
+
+Potential areas for future development include:
+
+- Integration with authorised industrial electricity meter data.
+- Calibration against verified utility tariffs and production schedules.
+- More detailed equipment and operating constraints.
+- Historical energy trend analysis.
+- Evaluation of anomaly detection accuracy.
+- Validation of optimisation quality across different operating scenarios.
 - Pilot studies with participating MSME manufacturers.
 - Measurement of actual energy, cost, and environmental outcomes.
 
-These are future development directions rather than claims of currently available functionality.
+These items represent potential enhancements rather than claims of existing functionality.
 
 ---
 
-## 👥 Team
+Team
 
-**Team Name:** Techies  
-**Team Leader:** Sai Harshith  
-**Project:** GridMind AI  
-**Focus:** Sustainable energy, industrial efficiency, AI-assisted investigation, and mathematical optimisation.
+Team Name: Techies
+Team Leader: Sai Harshith
+Project: GridMind AI
 
----
-
-## 📄 License
-
-No open-source license is currently specified. Unless a license is added to the repository, permissions to use, modify, or redistribute the project should not be assumed.
+Focus Areas: Sustainable energy, industrial efficiency, AI-assisted investigation, and mathematical optimisation.
 
 ---
 
-## ⚡ Smarter Energy Decisions. More Efficient Industry.
+License
 
-GridMind AI brings together generative AI and mathematical optimisation to explore how manufacturing facilities can better understand energy usage and evaluate potential efficiency improvements.
+No open-source license is currently specified. Unless a license is added to the repository, permissions to use, modify, or redistribute this project should not be assumed.
 
-By combining explainable investigation with numerical optimisation, the project aims to turn energy data into actionable insights and support a more sustainable approach to industrial operations.
+---
 
-**Built to explore a smarter, more energy-efficient future for manufacturing.** 🌱
+Vision
+
+Smarter energy decisions. More efficient manufacturing. A sustainable future.
+
+GridMind AI brings together generative AI and mathematical optimisation to explore how manufacturers can better understand energy consumption, investigate unusual patterns, and evaluate potential efficiency improvements.
+
+By combining contextual AI explanations with numerical optimisation, the project aims to turn energy data into actionable insights and support more informed industrial energy management decisions.
